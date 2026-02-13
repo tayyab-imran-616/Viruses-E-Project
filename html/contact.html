@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertex System | Global Pathogen Research</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        body{
+            background-color: var(--color-bg-black);
+            padding-top: 120px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loader">
+        <div class="loader-content">
+            <img src="/images/loader.png" alt="Loading Virus" class="virus-spinner">
+            <h2 class="mt-3" style="letter-spacing: 3px;">VERTEX SYSTEM</h2>
+        </div>
+    </div>
+
+<!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="/images/VertexSystemlogo.png" alt="Loading Virus" class="virus-spinner2" style="width: 50px; height: 50px;"> VERTEX SYSTEM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/html/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Viruses</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Corona Virus</a></li>
+                            <li><a class="dropdown-item" href="#">Ebola Virus</a></li>
+                            <li><a class="dropdown-item" href="#">Black Death</a></li>
+                            <li><a class="dropdown-item" href="#">HIV/AIDS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gallry</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/html/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- FAQS SECTION -->
+    <section class="faq-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" style="color: var(--color-danger); letter-spacing: 2px;">VIRAL DATABASE FAQ</h2>
+        
+        <div class="accordion accordion-flush" id="virusFAQ">
+            
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        How did the Corona Virus (COVID-19) originate?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#virusFAQ">
+                    <div class="accordion-body">
+                        The virus is believed to have originated in bats and was likely transmitted to humans through an intermediate animal host in Wuhan, China.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        What is the fatality rate of the Ebola Virus?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#virusFAQ">
+                    <div class="accordion-body">
+                        Ebola has an average case fatality rate of around 50%, varying from 25% to 90% in past outbreaks depending on the strain.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        How did the Black Death (Plague) spread?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#virusFAQ">
+                    <div class="accordion-body">
+                        Caused by the bacterium Yersinia pestis, it spread primarily via fleas on black rats traveling along merchant trade routes.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item mb-3">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        Is there a cure for HIV/AIDS?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#virusFAQ">
+                    <div class="accordion-body">
+                        While no functional cure exists, Antiretroviral Therapy (ART) allows patients to live long lives and prevents progression to AIDS.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    
+<!-- CONTACT SECTION -->
+    <section id="contact" class="section-padding bg-darker">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 mb-4">
+                    <h5 class="text-danger-custom">GET IN TOUCH</h5>
+                    <h2 class="mb-4">Contact Research Lab</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label text-white fw-bold">Full Name</label>
+                            <input type="text" class="form-control custom-input" placeholder="Dr. John Doe">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-white fw-bold">Email Address</label>
+                            <input type="email" class="form-control custom-input" placeholder="email@institute.org">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-white fw-bold">Secure Message</label>
+                            <textarea class="form-control custom-input" rows="5" placeholder="Enter your inquiry..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom w-20">SUBMIT DATA</button>
+                    </form>
+                </div>
+                <div class="col-lg-8">
+                    <div class="h-100">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.240367258089!2d67.02549227443143!3d24.91045194325708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33fb94eb666b5%3A0x6e383e3adce474a4!2sAptech%20Computer%20Education%20Site%20Center!5e1!3m2!1sen!2s!4v1770519526479!5m2!1sen!2s" width="100%" height="100%" style="border:0; min-height: 500px;" allowfullscreen="" loading="lazy"></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- FOOTER SECTION -->
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-section footer-brand">
+            <h3 class="brand-name">VERTEX SYSTEMS</h3>
+            <p class="tagline">Connect with Digital World</p>
+            <p class="summary">
+                Vertex Systems is your leading partner in cybersecurity. We specialize in identifying, 
+                analyzing, and neutralizing digital threats to keep your data safe from modern viruses.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="/html/index.html">Home</a></li>
+                <li><a href="viruses.html">Viruses</a></li>
+                <li><a href="/html/contact.html">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Virus Type</h4>
+            <ul>
+                <li><a href="#">Covid-19</a></li>
+                <li><a href="#">Black Death</a></li>
+                <li><a href="#">Nipha</a></li>
+                <li><a href="#">Dancing Plague</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="/html/contact.html">FAQ</a></li>
+                <li><a href="#">support</a></li>
+                <li><a href="#">Terms od service</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section footer-connect">
+            <h4>Connect With Us</h4>
+            <div class="social-links">
+                <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="tw"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" class="li"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="stay-updated">Secure your future today.</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 VERTEX SYSTEMS. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script src="/js/jquery-4.0.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
