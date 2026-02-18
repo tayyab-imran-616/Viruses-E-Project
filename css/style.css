@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5 {
 
 /* NEW VIRUS BACKGROUND SECTION */
 .bg-virus-pattern {
-    background: linear-gradient(to bottom, #0c0c1a, #1a0505); /* Slight red tint at bottom */
+    background: linear-gradient(to bottom, #0c0c1a, #1a0505); 
     border-top: 1px solid #222;
     border-bottom: 1px solid #222;
 }
