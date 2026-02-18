@@ -13,6 +13,26 @@
 
     <link rel="stylesheet" href="/css/style.css">
     <style>
+
+    /* ===== FORCE BLACK BACKGROUND ===== */
+
+body {
+    background-color: #000000 !important;
+    color: #ffffff;
+}
+
+.about-hero-section,
+.section-padding,
+.bg-dark,
+.bg-virus-pattern {
+    background-color: #000000 !important;
+}
+
+/* Agar koi white overlay aa raha ho */
+.about-card {
+    background: rgba(255,255,255,0.05);
+}
+
         /* ===============================
    HERO SECTION
 =================================*/
@@ -115,7 +135,7 @@
 }
 
 .value-card {
-    background: rgba(255,255,255,0.04);
+    background: rgba(14, 13, 13, 0.04);
     padding: 30px;
     border-radius: 20px;
     text-align: center;
@@ -221,6 +241,9 @@
     border-color: var(--color-danger);
 }
 
+#a1{
+    word-spacing: 15px;
+}
     </style>
 </head>
 
@@ -259,10 +282,10 @@
     <section class="about-hero-section">
     <div class="about-hero-content text-center">
         <h5 class="text-accent">ADVANCED VIROLOGY</h5>
-        <h1 class="display-4 mt-3">Defending Our Structure</h1>
+        <h1 class="display-4 mt-3" id="a1">Defending Our Structure</h1>
         <p class="mt-4 text-muted-light">
             Viruses have caused major damage to mankind. Information is often scattered and confusing.
-            <strong class="text-accent">Vertex Systems</strong> centralizes verified virus intelligence
+            <strong class="text-accent">Vertex Systems <br> </strong> centralizes verified virus intelligence
             to protect communities worldwide.
         </p>
     </div>
