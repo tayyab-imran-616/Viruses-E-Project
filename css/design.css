@@ -1,0 +1,585 @@
+/* Fonts & Root Variables */
+:root {
+  --accent-red: #ff0040;
+  --text-dim: rgba(255, 255, 255, 0.7);
+  --color-teal: #28d5cb;
+  --color-bg-dark: #0c0c1a;
+  --color-bg-black: #030308;
+  --color-blue-deep: #201d75;
+  --color-text-white: #e0e0e0;
+  --color-danger: rgb(220, 0, 0); 
+}
+
+body {
+  background-color: #050505;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* --- LOADER --- */
+#loader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #000, #111);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.loader-content { 
+    text-align: center; 
+}
+
+.virus-spinner {
+    width: 80px; height: 80px;
+    filter: drop-shadow(2px 2px 10px var(--color-teal));
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+
+/* --- GLASS NAVBAR --- */
+.virus-spinner2 {
+    width: 80px; height: 80px;
+    filter: drop-shadow(2px 2px 15px black);
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin { 
+    0% { transform: rotate(0deg); } 
+    50% { transform: rotate(180deg); } 
+    100% { transform: rotate(0deg); } 
+}
+
+.navbar {
+    background-color: rgba(3, 3, 8, 0.2); 
+    padding: 30px 0; 
+    transition: all 0.4s ease;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.navbar.scrolled {
+    background-color: rgba(3, 3, 8, 0.75); /* Glass effect background */
+    backdrop-filter: blur(15px); /* BLUR EFFECT */
+    -webkit-backdrop-filter: blur(15px);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(40, 213, 203, 0.3);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: white !important;
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    color: #e0e0e0 !important;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: all 0.3s;
+    position: relative;
+}
+
+/* --- UNDERLINE ON HOVER --- */
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-teal);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::before, .nav-link.active::before {
+    width: 100%;
+}
+
+.nav-link:hover{
+    color: var(--color-danger) !important;
+}
+
+.nav-link:active{
+    color: var(--color-text-white) !important;
+}
+
+.dropdown-menu {
+    background-color: rgba(3, 3, 8, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-danger); /* Red Border */
+}
+.dropdown-item { color: var(--color-teal); }
+.dropdown-item:hover {
+    background-color: var(--color-danger);
+    color: white;
+}
+
+
+/* Hero Wrapper */
+.hero-wrapper {
+    position: relative;
+    height: 105vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Background Image & Fade */
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('/images/corona1.png') no-repeat center center;
+    background-size: cover;
+    filter: brightness(0.8); /* Ziyada dark nahi rakha */
+    z-index: -2;
+}
+
+.hero-fade-bottom {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 40%;
+    background: linear-gradient(to top, #050505, transparent);
+    z-index: -1;
+}
+
+/* Hero Content & Animations */
+.content-box {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.system-status {
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
+    letter-spacing: 5px;
+    color: var(--text-dim);
+    margin-bottom: 15px;
+}
+
+.hero-title {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.5rem, 10vw, 5.5rem);
+    line-height: 1;
+    margin-bottom: 25px;
+    word-spacing: 20px;
+}
+
+.hero-subtitle {
+    font-family: 'Times New Roman', Times, serif;  
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    color: var(--text-dim);
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+/* Modern Button */
+.btn-scan {
+    position: relative;
+    padding: 15px 40px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    letter-spacing: 3px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.4s ease;
+    background-color: #141212;
+}
+
+.btn-scan:hover {
+    background: white;
+    color: black;
+    /* Halka (Subtle) Red Glow */
+    box-shadow: 0 0 10px rgba(255, 0, 64, 0.4); 
+    border-color: #ff0040;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Fix: Screen Shake Prevention */
+@media (max-width: 768px) {
+    .hero-subtitle br { display: none; }
+    .hero-wrapper { padding: 0 15px; }
+}
+
+.intro-section {
+    padding: 100px 0;
+    background-color: #050505; /* Black background to match the fade */
+    position: relative;
+}
+
+/* Section Title */
+.section-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.title-underline {
+    width: 60px;
+    height: 3px;
+    background: var(--accent-red);
+    margin: 0 auto;
+}
+
+/* Intro Content Styling */
+.intro-content-wrapper {
+    margin-top: 60px;
+}
+
+.intro-text-box {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.intro-subheading {
+    color: var(--accent-red);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.intro-text-box p {
+    color: var(--text-dim);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+/* Vertical Line */
+.vertical-line {
+    width: 1px;
+    height: 250px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+/* Image Scanner Effect */
+.intro-image-box {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.image-scanner-effect {
+    position: relative;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+.virus-scan-img {
+    filter: grayscale(1) brightness(0.8);
+    transition: 0.5s ease;
+}
+
+.image-scanner-effect:hover .virus-scan-img {
+    filter: grayscale(0) brightness(1);
+}
+
+.scan-line {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 2px;
+    background: var(--accent-red);
+    box-shadow: 0 0 15px var(--accent-red);
+    animation: scanMove 3s linear infinite;
+}
+
+@keyframes scanMove {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
+
+/* Reveal Animation Class (JS se control hogi) */
+.reveal {
+    opacity: 1 !important;
+    transform: translate(0) !important;
+    transition: all 1s ease-out;
+}
+
+/* Mobile Fixes */
+@media (max-width: 991px) {
+    .intro-text-box { text-align: center; margin-bottom: 40px; }
+    .vertical-line { display: none; }
+}
+
+.symptoms-section {
+    padding: 100px 0;
+    background-color: #050505;
+}
+
+.section-subtitle {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.symptom-card-wrapper {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.symptom-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 40px 25px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.symptom-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--accent-red);
+}
+
+.card-img-container {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 25px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.symptom-card:hover .card-img-container {
+    background: var(--accent-red);
+    box-shadow: 0 0 20px rgba(255, 0, 64, 0.4);
+}
+
+.symptom-icon {
+    width: 100%;
+    height: auto;
+    filter: invert(1) brightness(0.8);
+}
+
+.symptom-card h4 {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.symptom-card p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Red Glow on Hover */
+.card-border-glow {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 0, 64, 0.1), transparent);
+    opacity: 0;
+    transition: 0.4s;
+    z-index: -1;
+}
+
+.symptom-card:hover .card-border-glow {
+    opacity: 1;
+}
+
+/* Reveal Animation */
+.reveal-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: all 0.8s ease-out;
+}
+
+.prevention-section {
+    background: #050505;
+    position: relative;
+    overflow: hidden;
+}
+
+/* List Styling */
+.protocol-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 3px solid var(--accent-red);
+    transition: 0.3s;
+}
+
+.protocol-item:hover {
+    background: rgba(255, 0, 64, 0.05);
+    transform: translateX(10px);
+}
+
+.protocol-num {
+    font-size: 1.5rem;
+    color: var(--accent-red);
+    margin-right: 25px;
+    font-weight: 700;
+    opacity: 0.6;
+}
+
+.protocol-info h4 {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.protocol-info p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Circular Scanner Animation */
+.scanner-circle-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scanner-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed var(--accent-red);
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+}
+
+.scanner-content {
+    color: var(--accent-red);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Handling */
+@media (max-width: 991px) {
+    .scanner-circle-wrapper { margin-top: 50px; }
+    .protocol-item { border-left: none; border-bottom: 2px solid var(--accent-red); }
+}
+
+/* Contact Section Styling */
+.contact-section {
+    background: #050505;
+    padding-bottom: 80px;
+}
+
+.contact-terminal {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    border-radius: 4px;
+}
+
+/* Cyber Inputs */
+.form-label-cyber {
+    font-size: 0.7rem;
+    color: var(--accent-red);
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-control-cyber {
+    background: rgba(255, 255, 255, 0.03);
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    color: white;
+    padding: 12px;
+    transition: 0.4s;
+}
+
+.form-control-cyber:focus {
+    background: rgba(255, 0, 64, 0.02);
+    border-bottom: 1px solid var(--accent-red);
+    box-shadow: none;
+    outline: none;
+    color: white;
+}
+
+/* Footer Styling */
+.footer-cyber {
+    background: #020202;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-logo {
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+}
+
+.footer-logo span { color: var(--accent-red); }
+
+.footer-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.footer-links a:hover { color: var(--accent-red); }
+
+.copyright-text {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.3);
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .footer-links a { display: block; margin: 10px 0; }
+}
+
+/* Image path aur centering fix */
+.bd-bg-adjust {
+    background-image: url('/images/bd-1.png') !important; /* Apni file ka sahi naam yahan likho */
+    filter: brightness(0.8) contrast(1.1) !important;
+}
+
+.eb-bg-adjust {
+    background-image: url('/images/eb-3.jpg') !important; /* Apni file ka sahi naam yahan likho */
+    filter: brightness(0.8) contrast(0.8) !important;
+}
+
+.ad-bg-adjust {
+    background-image: url('/images/Aids.jfif') !important; /* Apni file ka sahi naam yahan likho */
+    filter: brightness(0.7) contrast(1.1) !important;
+}
