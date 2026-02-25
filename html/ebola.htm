@@ -67,7 +67,7 @@
     </div>
 </header>
 
-<section id="intro" class="intro-section">
+<section id="intro" class="intro-section ebola-theme">
     <div class="container">
         <div class="row mb-5 text-center">
             <div class="col-12">
@@ -78,13 +78,9 @@
 
         <div class="row align-items-center intro-content-wrapper">
             <div class="col-lg-5 col-md-12 intro-text-box">
-                <h3 class="intro-subheading">SARS-CoV-2 Archive</h3>
-                <p>
-                    SARS-CoV-2 is a highly transmissible coronavirus that emerged in late 2019. It features a unique spike protein structure that allows it to bypass human immune defenses with alarming efficiency.
-                </p>
-                <p>
-                    The "Vertex System" monitors its mutations in real-time, providing deep-dive analytics into protein structures and global transmission vectors.
-                </p>
+                <h3 class="intro-subheading">Ebolavirus Archive (BSL-4)</h3>
+                <p>Ebola Virus Disease (EVD) is characterized by viral hemorrhagic fever. It is a highly lethal pathogen requiring Level 4 containment.</p>
+                <p>Our real-time protein analysis helps identify mutation patterns in the glycoprotein structure of the Zaire strain.</p>
             </div>
 
             <div class="col-lg-2 d-none d-lg-flex justify-content-center">
@@ -93,9 +89,8 @@
 
             <div class="col-lg-5 col-md-12 text-center intro-image-box">
                 <div class="image-scanner-effect">
-                    <img src="../images/eb-1.webp" alt="Virus Analysis" class="img-fluid virus-scan-img">
-                    <div class="scan-line"></div>
-                </div>
+                    <img src="../images/eb-1.webp" alt="Ebola Analysis" class="img-fluid virus-scan-img">
+                    <div class="scan-line-fast"></div> </div>
             </div>
         </div>
     </div>
@@ -167,88 +162,38 @@
     </div>
 </section>
 
-<section id="prevention" class="prevention-section py-5">
+<section class="ebola-terminal section-padding">
+    <div class="terminal-overlay"></div>
     <div class="container">
-        <div class="row mb-5 text-center reveal">
-            <div class="col-12">
-                <h2 class="section-title">SAFETY PROTOCOLS</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle mt-3">Execute the following directives to minimize pathogen infiltration.</p>
+        <div class="terminal-header text-center mb-5">
+            <h2 class="terminal-glitch" data-text="SYSTEM_OVERRIDE: EBOLA">SYSTEM_OVERRIDE: EBOLA</h2>
+            <div class="status-bar">
+                <span class="pulse-dot"></span> SECURE CONNECTION: BSL-4 ENABLED
             </div>
         </div>
 
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="protocol-list">
-                    <div class="protocol-item reveal-left">
-                        <div class="protocol-num">01</div>
-                        <div class="protocol-info">
-                            <h4>Respiratory Shielding</h4>
-                            <p>Utilize high-filtration masks in high-density zones to block airborne vectors.</p>
-                        </div>
-                    </div>
-                    <div class="protocol-item reveal-left" style="transition-delay: 0.2s;">
-                        <div class="protocol-num">02</div>
-                        <div class="protocol-info">
-                            <h4>Sanitization Buffer</h4>
-                            <p>Maintain 20-second decontamination cycles using high-grade surfactants (Soap/Alcohol).</p>
-                        </div>
-                    </div>
-                    <div class="protocol-item reveal-left" style="transition-delay: 0.4s;">
-                        <div class="protocol-num">03</div>
-                        <div class="protocol-info">
-                            <h4>Spatial Distancing</h4>
-                            <p>Maintain a 2-meter physical buffer zone from potential biological carriers.</p>
-                        </div>
-                    </div>
+        <div class="terminal-interface">
+            <div class="terminal-node left" data-aos="fade-right">
+                <div class="node-circle">01</div>
+                <div class="node-text">
+                    <h3>LEVEL 4 ISOLATION</h3>
+                    <p>Total containment in negative pressure environments. Specialized airlocks required for entry/exit.</p>
                 </div>
             </div>
 
-            <div class="col-lg-6 text-center reveal-right">
-                <div class="scanner-circle-wrapper">
-                    <div class="scanner-ring"></div>
-                    <div class="scanner-content">
-                        <i class="bi bi-shield-check"></i>
-                        <span class="d-block mt-2">SHIELD ACTIVE</span>
-                    </div>
+            <div class="terminal-node right" data-aos="fade-left">
+                <div class="node-circle">02</div>
+                <div class="node-text">
+                    <h3>BIO-BARRIER PROTOCOL</h3>
+                    <p>Double-gloving and impermeable pressure suits. Immediate chemical shower post-exposure.</p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
 
-<section id="contact" class="contact-section py-5">
-    <div class="container">
-        <div class="row mb-5 text-center reveal">
-            <div class="col-12">
-                <h2 class="section-title">TRANSMISSION CENTER</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle mt-3">Establish a secure link with Vertex Command for inquiries.</p>
-            </div>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="contact-terminal reveal-up">
-                    <form id="contactForm" class="p-4">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label class="form-label-cyber">USER_ID</label>
-                                <input type="text" class="form-control-cyber" placeholder="Enter Name..." required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label-cyber">COMM_CHANNEL</label>
-                                <input type="email" class="form-control-cyber" placeholder="Enter Email..." required>
-                            </div>
-                            <div class="col-12 mt-4">
-                                <label class="form-label-cyber">ENCRYPTED_MESSAGE</label>
-                                <textarea class="form-control-cyber" rows="4" placeholder="Type your message here..."></textarea>
-                            </div>
-                            <div class="col-12 text-center mt-5">
-                                <button type="submit" class="btn-cyber w-100">SEND TRANSMISSION</button>
-                            </div>
-                        </div>
-                    </form>
+            <div class="terminal-node left" data-aos="fade-right">
+                <div class="node-circle">03</div>
+                <div class="node-text">
+                    <h3>VIRAL WASTE PURGE</h3>
+                    <p>All laboratory waste must be autoclaved and incinerated at 1200°C to ensure zero-vector survival.</p>
                 </div>
             </div>
         </div>

@@ -145,3 +145,17 @@ function initializeScan() {
         setTimeout(() => { btn.innerHTML = "INITIALIZE SCAN"; }, 1000);
     }, 1500);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.protocol-card');
+    
+    window.addEventListener('scroll', () => {
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            if(cardTop < window.innerHeight - 100) {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }
+        });
+    });
+});
