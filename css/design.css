@@ -1,4 +1,3 @@
-/* Fonts & Root Variables */
 :root {
   --accent-red: #ff0040;
   --text-dim: rgba(255, 255, 255, 0.7);
@@ -17,7 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-/* --- LOADER --- */
 #loader {
     position: fixed;
     top: 0; left: 0;
@@ -45,7 +43,6 @@ body {
     100% { transform: rotate(360deg); } 
 }
 
-/* --- GLASS NAVBAR --- */
 .virus-spinner2 {
     width: 80px; height: 80px;
     filter: drop-shadow(2px 2px 15px black);
@@ -66,8 +63,8 @@ body {
 }
 
 .navbar.scrolled {
-    background-color: rgba(3, 3, 8, 0.75); /* Glass effect background */
-    backdrop-filter: blur(15px); /* BLUR EFFECT */
+    background-color: rgba(3, 3, 8, 0.75);
+    backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     padding: 15px 0;
     border-bottom: 1px solid rgba(40, 213, 203, 0.3);
@@ -88,8 +85,6 @@ body {
     position: relative;
 }
 
-/* --- UNDERLINE ON HOVER --- */
-
 .nav-link::before {
     content: '';
     position: absolute;
@@ -101,7 +96,8 @@ body {
     transition: width 0.3s ease;
 }
 
-.nav-link:hover::before, .nav-link.active::before {
+.nav-link:hover::before, 
+.nav-link.active::before {
     width: 100%;
 }
 
@@ -116,16 +112,18 @@ body {
 .dropdown-menu {
     background-color: rgba(3, 3, 8, 0.95);
     backdrop-filter: blur(10px);
-    border: 1px solid var(--color-danger); /* Red Border */
+    border: 1px solid var(--color-danger);
 }
-.dropdown-item { color: var(--color-teal); }
+
+.dropdown-item { 
+    color: var(--color-teal); 
+}
+
 .dropdown-item:hover {
     background-color: var(--color-danger);
     color: white;
 }
 
-
-/* Hero Wrapper */
 .hero-wrapper {
     position: relative;
     height: 105vh;
@@ -135,24 +133,24 @@ body {
     overflow: hidden;
 }
 
-/* Background Image & Fade */
 .hero-bg {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
     background: url('/images/corona1.png') no-repeat center center;
     background-size: cover;
-    filter: brightness(0.8); /* Ziyada dark nahi rakha */
+    filter: brightness(0.8);
     z-index: -2;
 }
 
 .hero-fade-bottom {
     position: absolute;
-    bottom: 0; left: 0; width: 100%; height: 40%;
+    bottom: 0; left: 0; 
+    width: 100%; height: 40%;
     background: linear-gradient(to top, #050505, transparent);
     z-index: -1;
 }
 
-/* Hero Content & Animations */
 .content-box {
     opacity: 0;
     transform: translateY(30px);
@@ -164,6 +162,7 @@ body {
     letter-spacing: 5px;
     color: var(--text-dim);
     margin-bottom: 15px;
+    word-spacing: 10px;
 }
 
 .hero-title {
@@ -183,8 +182,6 @@ body {
     margin: 0 auto 40px auto;
     line-height: 1.6;
 }
-
-/* Modern Button */
 .btn-scan {
     position: relative;
     padding: 15px 40px;
@@ -201,12 +198,10 @@ body {
 .btn-scan:hover {
     background: white;
     color: black;
-    /* Halka (Subtle) Red Glow */
     box-shadow: 0 0 10px rgba(255, 0, 64, 0.4); 
     border-color: #ff0040;
 }
 
-/* Animations */
 @keyframes fadeInUp {
     to {
         opacity: 1;
@@ -214,7 +209,6 @@ body {
     }
 }
 
-/* Responsive Fix: Screen Shake Prevention */
 @media (max-width: 768px) {
     .hero-subtitle br { display: none; }
     .hero-wrapper { padding: 0 15px; }
@@ -222,28 +216,27 @@ body {
 
 .intro-section {
     padding: 100px 0;
-    background-color: #050505; /* Black background to match the fade */
+    background-color: #050505;
     position: relative;
 }
 
-/* Section Title */
 .section-title {
     font-size: clamp(1.8rem, 5vw, 2.5rem);
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     margin-bottom: 10px;
     color: white;
+    word-spacing: 10px;
 }
 
 .title-underline {
-    width: 60px;
-    height: 3px;
+    width: 250px;
+    height: 2px;
     background: var(--accent-red);
     margin: 0 auto;
 }
 
-/* Intro Content Styling */
 .intro-content-wrapper {
-    margin-top: 60px;
+    margin-top: 80px;
 }
 
 .intro-text-box {
@@ -251,27 +244,23 @@ body {
     transform: translateX(-30px);
 }
 
-.intro-subheading {
-    color: var(--accent-red);
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
 .intro-text-box p {
     color: var(--text-dim);
     line-height: 1.8;
     margin-bottom: 20px;
     font-size: 1.05rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    max-width: 95%;
 }
 
-/* Vertical Line */
 .vertical-line {
     width: 1px;
     height: 250px;
     background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
 
-/* Image Scanner Effect */
 .intro-image-box {
     opacity: 0;
     transform: translateX(30px);
@@ -282,15 +271,6 @@ body {
     display: inline-block;
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 10px;
-}
-
-.virus-scan-img {
-    filter: grayscale(1) brightness(0.8);
-    transition: 0.5s ease;
-}
-
-.image-scanner-effect:hover .virus-scan-img {
-    filter: grayscale(0) brightness(1);
 }
 
 .scan-line {
@@ -306,81 +286,89 @@ body {
     100% { top: 100%; }
 }
 
-/* Reveal Animation Class (JS se control hogi) */
 .reveal {
     opacity: 1 !important;
     transform: translate(0) !important;
     transition: all 1s ease-out;
 }
 
-/* Mobile Fixes */
 @media (max-width: 991px) {
     .intro-text-box { text-align: center; margin-bottom: 40px; }
     .vertical-line { display: none; }
 }
 
-/* --- THEME COLORS & FILTERS --- */
-/* Plague (Orange) */
 .plague-theme .intro-subheading, .plague-theme .title-underline, .plague-theme .scan-line-side {
-    background: #ff9900 !important; color: #ff9900 !important;
+    background: #ff9900 !important; 
+    color: #ff9900 !important;
 }
 .plague-theme .virus-scan-img { filter: sepia(0.8) contrast(1.2); }
 
-/* Ebola (Blood Red) */
 .ebola-theme .intro-subheading, .ebola-theme .title-underline, .ebola-theme .scan-line-fast {
-    background: #ff0000 !important; color: #ff0000 !important;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    background: #B1626F !important; 
+    color: #B1626F !important;
+    box-shadow: 0 0 20px rgba(177,98,111,1);
 }
-.ebola-theme .virus-scan-img { filter: saturate(2) hue-rotate(-15deg); }
 
-/* AIDS (Cyan) */
-.aids-theme .intro-subheading, .aids-theme .title-underline, .aids-theme .scan-line-cyan {
-    background: #00f2ff !important; color: #00f2ff !important;
+.aids-theme .intro-aids, .aids-theme .title-underline, .aids-theme .scan-line-cyan {
+    background: #642C48 !important; 
+    color: #df32ef !important;
 }
-/* .aids-theme .tilted-img { transform: rotate(-3deg); } */
 
-/* --- NEW ANIMATIONS --- */
 .scan-line-side {
-    position: absolute; top: 0; left: 0; height: 100%; width: 2px;
-    background: #ff9900; animation: scanLeftRight 4s linear infinite;
+    position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+    background: #ff9900; animation: scanMove 3s linear infinite;
 }
+
+.scan-line-fast {
+    position: absolute; top: 0; left: 0; height: 100%; width: 2px;
+    background: #ff0000; animation: scanLeftRight 3s linear infinite;
+}
+
 @keyframes scanLeftRight {
     0% { left: 0; } 100% { left: 100%; }
 }
 
-.scan-line-fast {
-    position: absolute; top: 0; left: 0; width: 100%; height: 2px;
-    background: #ff0000; animation: scanMove 1.5s linear infinite; /* Twice as fast */
+.scan-line-horizontal-cyan {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 4px;
+    background: #28051e !important;
+    box-shadow: 0 0 15px #642C48, 0 0 30px rgba(100, 44, 72, 0.5); /* Custom Glow */
+    animation: scanLeftRightCyan 3s linear infinite;
+    z-index: 2;
 }
 
-.scan-line-cyan {
-    position: absolute; top: 0; left: 0; width: 100%; height: 2px;
-    background: #00f2ff; animation: scanMove 3s linear infinite;
+@keyframes scanLeftRightCyan {
+    0% { left: 0; }
+    100% { left: 100%; }
 }
 
-/* Pathogen Images ko uniform banayein */
 .intro-image-box .image-scanner-effect {
-    width: 100%; /* Container ki width lock */
-    max-width: 500px; /* Aids wali image ke size ke mutabiq adjust karein */
+    width: 100%;
+    max-width: 500px;
     margin: 0 auto;
     overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .virus-scan-img {
     width: 100%;
-    height: 280px; /* Aids wali image ki height ke mutabiq fixed karein */
-    object-fit: cover; /* Image kategi nahi balki box mein fit ho jayegi */
+    height: 280px;
+    object-fit: cover;
     display: block;
 }
 
-/* Scanner line ko bhi image ke height ke mutabiq adjust karein */
-.image-scanner-effect {
-    height: 300px; /* Padding ke sath total height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.scan-line-horizontal {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 3px;
+    z-index: 3;
+    animation: scanLeftRight 3s linear infinite;
 }
 
+/* Symptoms Section */
 .symptoms-section {
     padding: 100px 0;
     background-color: #050505;
@@ -393,7 +381,6 @@ body {
     margin: 0 auto;
 }
 
-/* Card Styling */
 .symptom-card-wrapper {
     opacity: 0;
     transform: translateY(40px);
@@ -411,7 +398,6 @@ body {
     overflow: hidden;
 }
 
-/* Hover Effect */
 .symptom-card:hover {
     transform: translateY(-10px);
     background: rgba(255, 255, 255, 0.06);
@@ -453,7 +439,6 @@ body {
     margin-bottom: 0;
 }
 
-/* Red Glow on Hover */
 .card-border-glow {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -467,20 +452,19 @@ body {
     opacity: 1;
 }
 
-/* Reveal Animation */
 .reveal-up {
     opacity: 1 !important;
     transform: translateY(0) !important;
     transition: all 0.8s ease-out;
 }
 
+/* Prevention Section */
 .prevention-section {
     background: #050505;
     position: relative;
     overflow: hidden;
 }
 
-/* List Styling */
 .protocol-item {
     display: flex;
     align-items: flex-start;
@@ -516,7 +500,7 @@ body {
     margin-bottom: 0;
 }
 
-/* Circular Scanner Animation */
+/* Circular Scanner */
 .scanner-circle-wrapper {
     position: relative;
     width: 250px;
@@ -547,13 +531,12 @@ body {
     to { transform: rotate(360deg); }
 }
 
-/* Responsive Handling */
 @media (max-width: 991px) {
     .scanner-circle-wrapper { margin-top: 50px; }
     .protocol-item { border-left: none; border-bottom: 2px solid var(--accent-red); }
 }
 
-/* Contact Section Styling */
+/* Contact Section */
 .contact-section {
     background: #050505;
     padding-bottom: 80px;
@@ -566,7 +549,6 @@ body {
     border-radius: 4px;
 }
 
-/* Cyber Inputs */
 .form-label-cyber {
     font-size: 0.7rem;
     color: var(--accent-red);
@@ -593,7 +575,7 @@ body {
     color: white;
 }
 
-/* Footer Styling */
+/* Footer */
 .footer-cyber {
     background: #020202;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -625,54 +607,128 @@ body {
     letter-spacing: 1px;
 }
 
-/* Responsive Fix */
 @media (max-width: 768px) {
     .footer-links a { display: block; margin: 10px 0; }
 }
 
-/* Image path aur centering fix */
+/* Background Image Adjustments */
 .bd-bg-adjust {
-    background-image: url('/images/bd-1.png') !important; /* Apni file ka sahi naam yahan likho */
+    background-image: url('/images/bd-1.png') !important;
     filter: brightness(0.8) contrast(1.1) !important;
 }
 
 .eb-bg-adjust {
-    background-image: url('/images/eb-3.jpg') !important; /* Apni file ka sahi naam yahan likho */
+    background-image: url('/images/eb-3.jpg') !important;
     filter: brightness(0.8) contrast(0.8) !important;
 }
 
 .ad-bg-adjust {
-    background-image: url('/images/Aids.jfif') !important; /* Apni file ka sahi naam yahan likho */
+    background-image: url('/images/aids-8.jpg') !important;
     filter: brightness(0.7) contrast(1.1) !important;
 }
 
-/* --- HEX VAULT STYLES --- */
+/* Radar Section */
+.radar-container {
+    position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radar-core {
+    width: 120px;
+    height: 120px;
+    background: var(--color-danger);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 0 50px rgba(220, 0, 0, 0.5);
+}
+
+.core-inner {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.core-pulse {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--color-danger);
+    border-radius: 50%;
+    animation: aids-ripple 2s infinite linear;
+}
+
+@keyframes aids-ripple {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(4); opacity: 0; }
+}
+
+.radar-node {
+    position: absolute;
+    width: 250px;
+    z-index: 5;
+}
+
+.node-info {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--color-teal);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+}
+
+.node-info h3 {
+    color: var(--color-teal);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.node-info p {
+    font-size: 0.85rem;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+.radar-node:hover .node-info {
+    background: rgba(40, 213, 203, 0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(40, 213, 203, 0.2);
+}
+
+.node-1 { top: 10%; left: 15%; }
+.node-2 { top: 50%; right: 10%; transform: translateY(-50%); }
+.node-3 { bottom: 10%; left: 15%; }
+
+.node-connector {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-teal), transparent);
+    width: 100px;
+    z-index: -1;
+}
+
+.node-1 .node-connector { top: 100%; left: 50%; transform: rotate(45deg); }
+.node-2 .node-connector { top: 50%; right: 100%; }
+.node-3 .node-connector { bottom: 100%; left: 50%; transform: rotate(-45deg); }
+
+@media (max-width: 991px) {
+    .radar-container { height: auto; flex-direction: column; gap: 40px; }
+    .radar-node { position: static; width: 100%; }
+    .radar-core { margin-bottom: 50px; }
+    .node-connector { display: none; }
+}
+
+/* Hex Vault Section */
 .hex-vault-section {
-    background: radial-gradient(circle at center, #1a0505 0%, #030308 100%); /* cite: user_css */
+    background: radial-gradient(circle at center, #1a0505 0%, #030308 100%);
     position: relative;
     z-index: 1;
-}
-
-.cyber-glitch {
-    font-size: 2.8rem;
-    font-weight: 800;
-    color: #fff;
-    text-shadow: 3px 3px var(--color-danger); /* cite: user_css */
-    letter-spacing: 2px;
-}
-
-.scanner-line {
-    width: 150px;
-    height: 4px;
-    background: var(--color-danger); /* cite: user_css */
-    margin: 15px auto;
-    box-shadow: 0 0 20px var(--color-danger);
-    animation: hex-scan 3s infinite ease-in-out;
-}
-
-@keyframes hex-scan {
-    0%, 100% { width: 50px; }
-    50% { width: 300px; }
 }
 
 .hex-container {
@@ -680,14 +736,14 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: -30px; /* Overlapping honeycomb feel */
+    gap: -30px;
     margin-top: 50px;
 }
 
 .hex-wrapper {
     width: 350px;
     height: 400px;
-    background: rgba(220, 0, 0, 0.2); /* cite: user_css */
+    background: rgba(220, 0, 0, 0.2);
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     position: relative;
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -697,7 +753,7 @@ body {
 .hex-content {
     position: absolute;
     top: 3px; left: 3px; right: 3px; bottom: 3px;
-    background: #0c0c1a; /* cite: user_css */
+    background: #0c0c1a;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     display: flex;
     flex-direction: column;
@@ -756,69 +812,69 @@ body {
     z-index: 5;
 }
 
-/* Responsive Fixes */
 @media (max-width: 991px) {
     .hex-container { gap: 30px; }
     .central-hex { transform: scale(1); }
-    .cyber-glitch { font-size: 2rem; }
 }
 
-/* --- EBOLA TERMINAL UNIQUE STYLES --- */
+/* AIDS Biotech Section */
+.aids-biotech-section {
+    background: radial-gradient(circle at top, #0c0c1a, #030308);
+    position: relative;
+    overflow: hidden;
+}
+
+.aids-glitch-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px var(--color-teal);
+}
+
+/* Hero Extras: system-glitch / status / spinner already in PART1-2 */
+/* Scanner Animations handled in previous part */
+
+/* --- EBOLA TERMINAL FIXED & CLEAN --- */
 .ebola-terminal {
-    background: #030308 !important; /* cite: user_css */
+    background: #030308 !important; /* Terminal dark background */
     position: relative;
     overflow: hidden;
     color: #fff;
 }
 
-/* Background Terminal Grid Effect */
+/* Background terminal grid overlay */
 .terminal-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
-                linear-gradient(90deg, rgba(255, 0, 0, 0.05), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.05));
+    background: linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%),
+                linear-gradient(90deg, rgba(255,0,0,0.05), rgba(0,255,0,0.02), rgba(0,0,255,0.05));
     background-size: 100% 4px, 3px 100%;
     z-index: 1;
     pointer-events: none;
 }
 
+/* Glitch text animation */
 .terminal-glitch {
     font-size: 3rem;
     font-weight: 900;
     text-transform: uppercase;
     position: relative;
-    color: var(--color-danger); /* cite: user_css */
-    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    color: var(--color-danger);
+    text-shadow: 
+        0.05em 0 0 rgba(255,0,0,0.75), 
+        -0.025em -0.05em 0 rgba(0,255,0,0.75), 
+        0.025em 0.05em 0 rgba(0,0,255,0.75);
     animation: glitch 500ms infinite;
 }
 
 @keyframes glitch {
-    0% { text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75); }
-    15% { text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75); }
-    100% { text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75); }
+    0% { text-shadow: 0.05em 0 0 rgba(255,0,0,0.75), -0.05em -0.025em 0 rgba(0,255,0,0.75); }
+    15% { text-shadow: -0.05em -0.025em 0 rgba(255,0,0,0.75), 0.025em 0.025em 0 rgba(0,255,0,0.75); }
+    100% { text-shadow: -0.025em 0 0 rgba(255,0,0,0.75), -0.025em -0.025em 0 rgba(0,255,0,0.75); }
 }
 
-.status-bar {
-    font-family: monospace;
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: var(--color-teal); /* cite: user_css */
-}
-
-.pulse-dot {
-    height: 10px; width: 10px;
-    background-color: var(--color-danger);
-    border-radius: 50%;
-    display: inline-block;
-    animation: pulse-red 1s infinite;
-}
-
-/* Terminal Nodes */
-.terminal-interface {
-    position: relative;
-    padding: 50px 0;
-}
-
+/* Terminal nodes */
 .terminal-node {
     display: flex;
     align-items: center;
@@ -827,7 +883,10 @@ body {
     z-index: 2;
 }
 
-.terminal-node.right { flex-direction: row-reverse; text-align: right; }
+.terminal-node.right {
+    flex-direction: row-reverse;
+    text-align: right;
+}
 
 .node-circle {
     width: 80px; height: 80px;
@@ -839,7 +898,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: var(--color-danger);
-    box-shadow: 0 0 20px rgba(220, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(220,0,0,0.3);
     background: rgba(0,0,0,0.8);
     transition: 0.4s;
 }
@@ -849,129 +908,18 @@ body {
     max-width: 500px;
 }
 
-.node-text h3 {
-    font-size: 1.8rem;
-    color: #fff;
-    margin-bottom: 10px;
-}
+.node-text h3 { font-size: 1.8rem; color: #fff; margin-bottom: 10px; }
+.node-text p  { color: #a0a0b0; font-size: 1rem; }
 
-.node-text p {
-    color: #a0a0b0; /* cite: user_css */
-    font-size: 1rem;
-}
-
+/* Hover effects */
 .terminal-node:hover .node-circle {
     background: var(--color-danger);
     color: #fff;
     transform: scale(1.2) rotate(360deg);
+    transition: transform 0.6s ease;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .terminal-node, .terminal-node.right {
-        flex-direction: column;
-        text-align: center;
-    }
-    .node-text { padding: 20px 0; }
-    .terminal-glitch { font-size: 1.8rem; }
-}
-
-/* --- AIDS BIOTECH UNIQUE STYLES --- */
-.aids-biotech-section {
-    background: radial-gradient(circle at top, #0c0c1a, #030308); /* cite: user_css */
-    position: relative;
-    overflow: hidden;
-}
-
-.aids-glitch-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: 4px;
-    text-shadow: 0 0 10px var(--color-teal); /* cite: user_css */
-}
-
-.radar-container {
-    position: relative;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Central Pulse Core */
-.radar-core {
-    width: 120px;
-    height: 120px;
-    background: var(--color-danger); /* cite: user_css */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    box-shadow: 0 0 50px rgba(220, 0, 0, 0.5);
-}
-
-.core-inner {
-    font-weight: 900;
-    font-size: 1.5rem;
-    color: #fff;
-}
-
-.core-pulse {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border: 2px solid var(--color-danger);
-    border-radius: 50%;
-    animation: aids-ripple 2s infinite linear;
-}
-
-@keyframes aids-ripple {
-    0% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(4); opacity: 0; }
-}
-
-/* Radar Nodes */
-.radar-node {
-    position: absolute;
-    width: 250px;
-    z-index: 5;
-}
-
-.node-info {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--color-teal); /* cite: user_css */
-    padding: 20px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    transition: 0.4s;
-}
-
-.node-info h3 {
-    color: var(--color-teal);
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.node-info p {
-    font-size: 0.85rem;
-    color: #ccc;
-    line-height: 1.4;
-}
-
-.radar-node:hover .node-info {
-    background: rgba(40, 213, 203, 0.1);
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(40, 213, 203, 0.2);
-}
-
-/* Positioning Nodes */
-.node-1 { top: 10%; left: 15%; }
-.node-2 { top: 50%; right: 10%; transform: translateY(-50%); }
-.node-3 { bottom: 10%; left: 15%; }
-
-/* Connector Lines */
+/* Connector lines between nodes */
 .node-connector {
     position: absolute;
     height: 2px;
@@ -984,10 +932,140 @@ body {
 .node-2 .node-connector { top: 50%; right: 100%; }
 .node-3 .node-connector { bottom: 100%; left: 50%; transform: rotate(-45deg); }
 
-/* RESPONSIVE */
-@media (max-width: 991px) {
-    .radar-container { height: auto; flex-direction: column; gap: 40px; }
-    .radar-node { position: static; width: 100%; }
-    .radar-core { margin-bottom: 50px; }
+/* Pulse Dot Indicator */
+.pulse-dot {
+    height: 10px; width: 10px;
+    background-color: var(--color-danger);
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse-red 1s infinite;
+}
+
+@keyframes pulse-red {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+    .terminal-node, .terminal-node.right { flex-direction: column; text-align: center; }
+    .node-text { padding: 20px 0; }
+    .terminal-glitch { font-size: 1.8rem; }
     .node-connector { display: none; }
+}
+
+/* --- THEME SPECIFIC GLOW & COLORS --- */
+/* Corona & Ebola (Red Neon) */
+
+/* --- CORONA GLOW ULTIMATE FIX --- */
+.corona-theme .status-progress-bar,
+section[class*="corona"] .status-progress-bar {
+    background: #ff0040 !important;
+    height: 10px !important;
+    width: 100% !important;
+    display: block !important;
+    border-radius: 5px !important;
+    /* Yeh hai main glow */
+    box-shadow: 0 0 20px #ff0040, 0 0 40px rgba(255, 0, 64, 0.7) !important;
+    margin-bottom: 30px !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* Heading ke niche wali line ka glow */
+.corona-theme .title-underline,
+section[class*="corona"] .title-underline {
+    background: #ff0040 !important;
+    box-shadow: 0 0 15px #ff0040 !important;
+    height: 3px !important;
+}
+
+.ebola-theme .status-progress-bar { 
+    background: #B1626F !important; 
+    box-shadow: 0 0 30px rgba(177,98,111,1);
+}
+
+/* Black Death (Orange Neon) */
+.plague-theme .status-progress-bar { 
+    background: #ff9900 !important; 
+    box-shadow: 0 0 15px #ff9900, 0 0 30px rgba(255, 153, 0, 0.4); 
+}
+
+/* AIDS (Cyan/Blue Neon) */
+.aids-theme .status-progress-bar { 
+    background: #642C48 !important;
+    box-shadow: 0 0 15px #642C48, 0 0 30px rgba(100, 44, 72, 0.5); /* Custom Glow */
+}
+
+/* Specific Progress Bar Height Fix */
+.status-progress-bar {
+    height: 10px !important;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* --- INTRO SECTION POLISHING --- */
+.intro-text-box p {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.image-scanner-effect {
+    width: 100% !important;
+    max-width: 500px;
+    height: 300px; /* Uniform height for all viruses */
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease;
+}
+
+.image-scanner-effect:hover {
+    border-color: var(--accent-red) !important;
+    box-shadow: 0 0 30px rgba(255, 0, 64, 0.2);
+}
+
+.virus-scan-img {
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover !important; /* Image stretch nahi hogi */
+    filter: grayscale(1) brightness(0.7);
+    transition: 0.5s ease;
+}
+
+.image-scanner-effect:hover .virus-scan-img {
+    filter: grayscale(0) brightness(1);
+}
+
+/* --- ANIMATION & RESPONSIVE FIXES --- */
+/* Unique names for animations to avoid conflict */
+@keyframes loaderSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes slowSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+.virus-spinner { animation: loaderSpin 2s linear infinite !important; }
+.virus-spinner2 { animation: slowSpin 6s linear infinite !important; }
+
+/* Responsive Spacing Fix */
+@media (max-width: 991px) {
+    .intro-content-wrapper {
+        display: flex;
+        flex-direction: column !important;
+        gap: 50px; /* Text aur Image ke beech gap */
+    }
+    
+    .intro-text-box, .intro-image-box {
+        transform: none !important; /* Mobile pe animation lag na kare */
+        opacity: 1 !important;
+        text-align: center;
+    }
+    
+    .intro-text-box p {
+        max-width: 100%;
+        padding: 0 15px;
+    }
 }
