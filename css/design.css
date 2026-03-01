@@ -744,7 +744,7 @@ body {
     align-items: center;
 }
 
-.radar-core {
+/* .radar-core {
     width: 120px;
     height: 120px;
     background: var(--color-danger);
@@ -754,7 +754,7 @@ body {
     justify-content: center;
     z-index: 10;
     box-shadow: 0 0 50px rgba(220, 0, 0, 0.5);
-}
+} */
 
 .core-inner {
     font-weight: 900;
@@ -762,7 +762,7 @@ body {
     color: #fff;
 }
 
-.core-pulse {
+/* .core-pulse {
     position: absolute;
     width: 120px;
     height: 120px;
@@ -774,6 +774,55 @@ body {
 @keyframes aids-ripple {
     0% { transform: scale(1); opacity: 1; }
     100% { transform: scale(4); opacity: 0; }
+} */
+
+/* HIV Circle - Isko relative rakha taake pulse iske center se nikle */
+.radar-core {
+    width: 120px !important;
+    height: 120px !important;
+    background: #dc0000 !important; /* Direct Red Color */
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important; 
+    z-index: 10 !important;
+    box-shadow: 0 0 40px rgba(220, 0, 0, 0.8) !important;
+    margin: 0 auto !important;
+    /* Floating Effect */
+    animation: float-hiv 3s ease-in-out infinite !important;
+}
+
+/* Pulse / Ripple - Isko absolute center kiya hai */
+.core-pulse {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: 2px solid #dc0000 !important;
+    border-radius: 50% !important;
+    z-index: -1 !important; /* Circle ke piche */
+    pointer-events: none !important;
+    /* Animation call */
+    animation: aids-ripple-final 2s infinite linear !important;
+}
+
+/* Animation Keyframes - Inka naam unique rakha hai */
+@keyframes aids-ripple-final {
+    0% { 
+        transform: translate(-50%, -50%) scale(1); 
+        opacity: 1; 
+    }
+    100% { 
+        transform: translate(-50%, -50%) scale(3.5); 
+        opacity: 0; 
+    }
+}
+
+@keyframes float-hiv {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
 .radar-node {
@@ -825,11 +874,67 @@ body {
 .node-2 .node-connector { top: 50%; right: 100%; }
 .node-3 .node-connector { bottom: 100%; left: 50%; transform: rotate(-45deg); }
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
     .radar-container { height: auto; flex-direction: column; gap: 40px; }
     .radar-node { position: static; width: 100%; }
     .radar-core { margin-bottom: 50px; }
     .node-connector { display: none; }
+} */
+
+/* --- Master Responsive Fix for Radar Section --- */
+@media (max-width: 991px) {
+    /* 1. Container ko free karo taake content niche barh sake */
+    .radar-container { 
+        height: auto !important; 
+        min-height: auto !important;
+        flex-direction: column !important; 
+        padding: 60px 20px !important;
+        gap: 30px !important;
+        display: flex !important;
+        overflow: visible !important;
+    }
+
+    /* 2. Radar Core (Circle) ko center mein set karo */
+    .radar-core { 
+        position: relative !important;
+        margin: 0 auto 60px !important; /* Circle aur cards ke beech gap */
+        z-index: 10;
+        order: 1; /* Circle hamesha upar rahega */
+    }
+
+    /* Pulse animation ko thoda control mein rakho mobile par */
+    .core-pulse {
+        width: 120px !important;
+        height: 120px !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    /* 3. Saare Nodes (Cards) ko tameez se line mein lao */
+    .radar-node { 
+        position: relative !important; /* Absolute positions cancel */
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        width: 100% !important; 
+        max-width: 400px !important; /* Mobile par width control */
+        margin: 0 auto !important;
+        order: 2; /* Cards circle ke niche aayenge */
+    }
+
+    .node-info {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+        text-align: center !important; /* Mobile par text center acha lagta hai */
+    }
+
+    /* 4. Connectors (Jo lines thi) unhein bilkul gayab karo */
+    .node-connector { 
+        display: none !important; 
+    }
 }
 
 /* Hex Vault Section */
