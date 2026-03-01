@@ -125,15 +125,12 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     }, 2000);
 });
 
-// Smooth Scroll for Footer Links
-document.querySelectorAll('.footer-links a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+function toggleFooterSection(id) {
+    if (window.innerWidth <= 600) {
+        const section = document.getElementById(id);
+        section.classList.toggle('active');
+    }
+}
 
 function initializeScan() {
     const btn = document.querySelector('.btn-scan');

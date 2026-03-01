@@ -104,3 +104,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentYear = new Date().getFullYear();
     footerBottom.innerHTML = `&copy; ${currentYear} VERTEX SYSTEMS. All Rights Reserved.`;
 });
+
+function toggleFooterSection(id) {
+    if (window.innerWidth <= 600) {
+        const section = document.getElementById(id);
+        section.classList.toggle('active');
+    }
+}

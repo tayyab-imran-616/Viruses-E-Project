@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"         rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link rel="stylesheet" href="/css/design.css">
 </head>
 <body>
@@ -165,7 +166,8 @@
 <section class="aids-biotech-section section-padding">
     <div class="container">
         <div class="aids-header text-center mb-5" data-aos="fade-up">
-            <h2 class="aids-glitch-title">HIV/AIDS: PREVENTION RADAR</h2>
+            <h2 class="aids-glitch-title">SAFETY PROTOCOLS</h2>
+            <div class="title-underline"></div>
             <p class="text-accent">Global Awareness & Safety Protocols</p>
         </div>
 
@@ -177,24 +179,24 @@
 
             <div class="radar-node node-1" data-aos="zoom-in" data-aos-delay="100">
                 <div class="node-info">
-                    <h3>PREP/PEP</h3>
-                    <p>Pre-exposure prophylaxis treatment for high-risk contact prevention.</p>
+                    <h3>Safe Medical Practices</h3>
+                    <p>Ensure protective measures and controlled procedures to reduce transmission risk.</p>
                 </div>
                 <div class="node-connector"></div>
             </div>
 
             <div class="radar-node node-2" data-aos="zoom-in" data-aos-delay="300">
                 <div class="node-info">
-                    <h3>BLOOD SCREENING</h3>
-                    <p>Systematic nucleic acid testing (NAT) for all donor blood units.</p>
+                    <h3>Avoid Sharing Needles</h3>
+                    <p>Never share syringes or sharp instruments to prevent blood-borne infection.</p>
                 </div>
                 <div class="node-connector"></div>
             </div>
 
             <div class="radar-node node-3" data-aos="zoom-in" data-aos-delay="500">
                 <div class="node-info">
-                    <h3>U=U PROTOCOL</h3>
-                    <p>Undetectable = Untransmittable. Ensuring viral load suppression through ART.</p>
+                    <h3>Regular Testing & Treatment</h3>
+                    <p>Early testing and proper antiretroviral treatment help control the virus and protect others.</p>
                 </div>
                 <div class="node-connector"></div>
             </div>
@@ -202,18 +204,76 @@
     </div>
 </section>
 
-<footer class="footer-cyber text-center py-4">
-    <div class="container">
-        <div class="footer-logo mb-3">VERTEX <span>SYSTEM</span></div>
-        <div class="footer-links mb-3">
-            <a href="#hero">Home</a>
-            <a href="#intro">Archive</a>
-            <a href="#symptoms">Symptoms</a>
-            <a href="#prevention">Safety</a>
+<footer class="cyber-footer">
+    <div class="footer-grid-overlay"></div>
+
+    <div class="footer-main-container">
+        <div class="footer-grid">
+            <div class="footer-column brand-col">
+                <div class="footer-logo-wrapper">
+                    <h3 class="cyber-logo" data-text="VERTEX SYSTEMS">VERTEX SYSTEM</h3>
+                    <div class="logo-underline"></div>
+                </div>
+                <p class="cyber-description">
+                    Advanced pathogen surveillance and viral threat analysis. Monitoring global outbreaks in real time.
+                </p>
+                <div class="footer-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">SURVEILLANCE ACTIVE // 2026</span>
+                </div>
+            </div>
+
+            <div class="footer-column collapsible-section" id="terminal-section">
+                <h4 class="column-title" onclick="toggleFooterSection('terminal-section')">
+                    Navigation <span class="mobile-plus">+</span>
+                </h4>
+                <ul class="cyber-links">
+                    <li><a href="../html/index.htm"><span class="link-prefix">></span> Home</a></li>
+                    <li><a href="../html/about.htm"><span class="link-prefix">></span> About</a></li>
+                    <li><a href="../html/contact.htm"><span class="link-prefix">></span> Contact</a></li>
+                    <li><a href="../html/contact.htm"><span class="link-prefix">></span> FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column collapsible-section" id="pathogen-section">
+                <h4 class="column-title" onclick="toggleFooterSection('pathogen-section')">
+                    Viruses <span class="mobile-plus">+</span>
+                </h4>
+                <ul class="cyber-links">
+                    <li><a href="../html/corona.htm"><span class="link-prefix">></span> Covid-19</a></li>
+                    <li><a href="../html/bd.htm"><span class="link-prefix">></span> Black Death</a></li>
+                    <li><a href="../html/ebola.htm"><span class="link-prefix">></span> Ebola</a></li>
+                    <li><a href="../html/aids.htm"><span class="link-prefix">></span> HIV/AIDS</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column social-col">
+                <h4 class="column-title">Connect with us</h4>
+                <div class="cyber-socials">
+                    <a href="https://www.facebook.com/" class="social-hex fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" class="social-hex insta" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.google.com/" class="social-hex tw" title="X"><i class="fab fa-google"></i></a>
+                    <a href="https://pk.linkedin.com/" class="social-hex li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="secure-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>ENCRYPTED CONNECTION</span>
+                </div>
+            </div>
         </div>
-        <p class="copyright-text">© 2026 VERTEX COMMAND | DATA ANALYTICS DIVISION</p>
+    </div>
+
+    <div class="footer-bottom-vault">
+        <div class="bottom-container">
+            <p class="copyright">&copy; 2026 VERTEX SYSTEMS // ALL RIGHTS RESERVED</p>
+            <div class="legal-links">
+                <a href="#">PRIVACY_POLICY</a>
+                <a href="#">TERMS_OF_USE</a>
+            </div>
+        </div>
     </div>
 </footer>
+
 <script src="/js/jquery-4.0.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

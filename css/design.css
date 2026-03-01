@@ -465,6 +465,11 @@ body {
     overflow: hidden;
 }
 
+#aa{
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
 .protocol-item {
     display: flex;
     align-items: flex-start;
@@ -536,79 +541,177 @@ body {
     .protocol-item { border-left: none; border-bottom: 2px solid var(--accent-red); }
 }
 
-/* Contact Section */
-.contact-section {
-    background: #050505;
-    padding-bottom: 80px;
-}
-
-.contact-terminal {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+/* --- CYBER FOOTER BASE (Same to Same) --- */
+.cyber-footer {
+    background-color: #030305;
+    color: #ffffff;
+    padding: 80px 0 0;
     position: relative;
-    border-radius: 4px;
+    overflow: hidden;
+    border-top: 1px solid rgba(40, 213, 203, 0.2);
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.form-label-cyber {
-    font-size: 0.7rem;
-    color: var(--accent-red);
-    letter-spacing: 2px;
-    display: block;
-    margin-bottom: 8px;
+.footer-grid-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(rgba(40, 213, 203, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(40, 213, 203, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: 0;
 }
 
-.form-control-cyber {
-    background: rgba(255, 255, 255, 0.03);
-    border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 0;
-    color: white;
-    padding: 12px;
-    transition: 0.4s;
+.footer-main-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 30px;
+    position: relative;
+    z-index: 1;
 }
 
-.form-control-cyber:focus {
-    background: rgba(255, 0, 64, 0.02);
-    border-bottom: 1px solid var(--accent-red);
-    box-shadow: none;
-    outline: none;
-    color: white;
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 40px;
 }
 
-/* Footer */
-.footer-cyber {
-    background: #020202;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.footer-logo {
-    font-weight: 700;
+.cyber-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
     letter-spacing: 3px;
-    font-size: 1.2rem;
+    color: #fff;
+    position: relative;
+    display: inline-block;
 }
 
-.footer-logo span { color: var(--accent-red); }
+.logo-underline {
+    width: 60px;
+    height: 4px;
+    background: #ff0040;
+    margin-top: 8px;
+    box-shadow: 0 0 15px #ff0040;
+}
 
-.footer-links a {
-    color: var(--text-dim);
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 0.8rem;
+.cyber-description {
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.6);
+    margin: 25px 0;
+    max-width: 350px;
+}
+
+.footer-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #28d5cb;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #28d5cb;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #28d5cb;
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+
+.column-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: #fff;
+    border-left: 3px solid #ff0040;
+    padding-left: 15px;
+}
+
+.cyber-links { list-style: none; padding: 0; }
+.cyber-links li { margin-bottom: 12px; }
+.cyber-links li a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 14px;
     transition: 0.3s;
+    display: flex;
+    align-items: center;
 }
 
-.footer-links a:hover { color: var(--accent-red); }
+.link-prefix { color: #ff0040; margin-right: 8px; opacity: 0; transition: 0.3s; }
+.cyber-links li a:hover { color: #fff; transform: translateX(8px); }
+.cyber-links li a:hover .link-prefix { opacity: 1; }
 
-.copyright-text {
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.3);
-    margin-top: 20px;
-    letter-spacing: 1px;
+.social-hex {
+    width: 45px; height: 45px;
+    background: rgba(255,255,255,0.05);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; text-decoration: none;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    transition: 0.4s; border: 1px solid rgba(255,255,255,0.1);
 }
 
-@media (max-width: 768px) {
-    .footer-links a { display: block; margin: 10px 0; }
+.social-hex:hover { transform: translateY(-5px) rotate(360deg); background: #ff0040; box-shadow: 0 0 20px rgba(255, 0, 64, 0.5); }
+.secure-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 15px; background: rgba(40, 213, 203, 0.1); border: 1px solid rgba(40, 213, 203, 0.3); border-radius: 4px; font-size: 10px; letter-spacing: 1px; }
+
+.footer-bottom-vault { margin-top: 60px; background: rgba(0,0,0,0.5); padding: 25px 0; border-top: 1px solid rgba(255,255,255,0.05); }
+.bottom-container { max-width: 1300px; margin: 0 auto; padding: 0 30px; display: flex; justify-content: space-between; align-items: center; }
+.copyright { font-size: 12px; color: rgba(255,255,255,0.4); }
+.legal-links a { font-size: 11px; color: rgba(255,255,255,0.4); text-decoration: none; margin-left: 20px; transition: 0.3s; }
+.legal-links a:hover { color: #ff0040; }
+
+/* --- MOBILE SPECIFIC (Word to Word Content + Compact Control) --- */
+@media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+
+@media (max-width: 600px) {
+    .footer-grid { grid-template-columns: 1fr; text-align: left; gap: 10px; }
+    
+    .column-title { 
+        display: flex; justify-content: space-between; align-items: center;
+        border-left: none; border-bottom: 1px solid rgba(255, 0, 64, 0.3);
+        padding: 15px 0; margin-bottom: 0; cursor: pointer;
+    }
+    
+    .mobile-plus { display: block; color: #ff0040; font-size: 20px; font-family: sans-serif; }
+
+    /* Hide links by default on mobile */
+    .collapsible-section .cyber-links {
+        max-height: 0; overflow: hidden;
+        transition: max-height 0.4s ease-out;
+    }
+
+    /* Show links when 'active' class is added */
+    .collapsible-section.active .cyber-links {
+        max-height: 300px; padding-top: 15px; padding-bottom: 15px;
+    }
+
+    .collapsible-section.active .mobile-plus { transform: rotate(45deg); color: #fff; }
+
+    .cyber-description { margin: 20px 0; max-width: 100%; text-align: left; }
+    .social-hex { margin: 0; }
+    .social-col { border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 20px; }
+    .bottom-container { flex-direction: column; gap: 15px; text-align: center; }
+}
+
+.cyber-socials { 
+    display: flex !important; 
+    flex-direction: row !important;
+    gap: 15px; 
+    margin-bottom: 25px; 
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 600px) {
+    .cyber-socials { 
+        justify-content: center !important;
+        margin-top: 15px; 
+    }
 }
 
 /* Background Image Adjustments */
@@ -628,6 +731,11 @@ body {
 }
 
 /* Radar Section */
+
+.text-accent{
+    margin-top: 20px;
+}
+
 .radar-container {
     position: relative;
     height: 600px;
@@ -725,10 +833,16 @@ body {
 }
 
 /* Hex Vault Section */
+
+.cyber-glitchA{
+    margin-bottom: 20px;
+}
+
 .hex-vault-section {
     background: radial-gradient(circle at center, #1a0505 0%, #030308 100%);
     position: relative;
     z-index: 1;
+    padding-bottom: 80px;
 }
 
 .hex-container {
@@ -737,7 +851,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: -30px;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .hex-wrapper {
@@ -819,25 +933,23 @@ body {
 
 /* AIDS Biotech Section */
 .aids-biotech-section {
-    background: radial-gradient(circle at top, #0c0c1a, #030308);
     position: relative;
     overflow: hidden;
 }
 
 .aids-glitch-title {
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     color: #fff;
     letter-spacing: 4px;
-    text-shadow: 0 0 10px var(--color-teal);
 }
 
-/* Hero Extras: system-glitch / status / spinner already in PART1-2 */
-/* Scanner Animations handled in previous part */
+/* --- EBOLA TERMINAL --- */
 
-/* --- EBOLA TERMINAL FIXED & CLEAN --- */
+.status-bar{
+    margin-top: 20px;
+}
+
 .ebola-terminal {
-    background: #030308 !important; /* Terminal dark background */
     position: relative;
     overflow: hidden;
     color: #fff;
@@ -966,7 +1078,6 @@ section[class*="corona"] .status-progress-bar {
     width: 100% !important;
     display: block !important;
     border-radius: 5px !important;
-    /* Yeh hai main glow */
     box-shadow: 0 0 20px #ff0040, 0 0 40px rgba(255, 0, 64, 0.7) !important;
     margin-bottom: 30px !important;
     position: relative !important;
@@ -998,7 +1109,6 @@ section[class*="corona"] .title-underline {
     box-shadow: 0 0 15px #642C48, 0 0 30px rgba(100, 44, 72, 0.5); /* Custom Glow */
 }
 
-/* Specific Progress Bar Height Fix */
 .status-progress-bar {
     height: 10px !important;
     border-radius: 5px;
@@ -1018,7 +1128,7 @@ section[class*="corona"] .title-underline {
 .image-scanner-effect {
     width: 100% !important;
     max-width: 500px;
-    height: 300px; /* Uniform height for all viruses */
+    height: 300px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -1033,7 +1143,7 @@ section[class*="corona"] .title-underline {
 .virus-scan-img {
     width: 100%;
     height: 100% !important;
-    object-fit: cover !important; /* Image stretch nahi hogi */
+    object-fit: cover !important;
     filter: grayscale(1) brightness(0.7);
     transition: 0.5s ease;
 }
@@ -1043,7 +1153,6 @@ section[class*="corona"] .title-underline {
 }
 
 /* --- ANIMATION & RESPONSIVE FIXES --- */
-/* Unique names for animations to avoid conflict */
 @keyframes loaderSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 @keyframes slowSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
@@ -1055,11 +1164,11 @@ section[class*="corona"] .title-underline {
     .intro-content-wrapper {
         display: flex;
         flex-direction: column !important;
-        gap: 50px; /* Text aur Image ke beech gap */
+        gap: 50px;
     }
     
     .intro-text-box, .intro-image-box {
-        transform: none !important; /* Mobile pe animation lag na kare */
+        transform: none !important;
         opacity: 1 !important;
         text-align: center;
     }

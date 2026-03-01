@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/css/design.css">
 </head>
 <body>
@@ -166,18 +167,20 @@
 <section class="hex-vault-section section-padding">
     <div class="container">
         <div class="vault-header text-center" data-aos="fade-down">
-            <h2 class="cyber-glitch">BLACK DEATH: CONTAINMENT PROTOCOLS</h2>
+            <div class="cyber-glitchA">
+            <h2 class="section-title">BLACK DEATH: CONTAINMENT PROTOCOLS</h2>
+            <div class="title-underline"></div>
+            </div>
             <div class="scanner-line"></div>
-            <p class="text-muted-light mt-3">Sanitary measures established during the 1347 Great Plague</p>
+            <p class="text-muted-light section-subtitle mt-3">Sanitary measures established during the 1347 Great Plague</p>
         </div>
 
         <div class="hex-container">
             <div class="hex-wrapper" data-aos="fade-up">
                 <div class="hex-content">
                     <div class="hex-inner">
-                        <span class="hex-code">PROTOCOL_隔离_01</span>
-                        <h3>THE 40-DAY LAW</h3>
-                        <p>Mandatory offshore anchoring for all merchant vessels. Implementation of 'Quarantena' to ensure biological decay of the Y. pestis bacteria.</p>
+                        <h3>Isolation of patients</h3>
+                        <p>Anyone showing plague symptoms should be kept separate from healthy people to prevent spreading the disease.</p>
                         <div class="hex-status active">ISOLATION ACTIVE</div>
                     </div>
                 </div>
@@ -186,9 +189,9 @@
             <div class="hex-wrapper central-hex" data-aos="fade-up" data-aos-delay="200">
                 <div class="hex-content">
                     <div class="hex-inner">
-                        <span class="hex-code">GEAR_防护_02</span>
-                        <h3>MIASMA BARRIER</h3>
-                        <p>Plague Doctor mask protocol. Using wax-coated leather and beak-filters filled with myrrh and lavender to neutralize contaminated air particles.</p>
+                        <h3>Protective clothing</h3>
+                        <p>Caretakers and medical staff must wear masks, gloves, and gowns to protect themselves from infection.
+                        </p>
                         <div class="hex-status danger">CRITICAL GEAR</div>
                     </div>
                 </div>
@@ -197,9 +200,8 @@
             <div class="hex-wrapper" data-aos="fade-up" data-aos-delay="400">
                 <div class="hex-content">
                     <div class="hex-inner">
-                        <span class="hex-code">CLEAN_消毒_03</span>
-                        <h3>THERMAL PURGE</h3>
-                        <p>Systematic incineration of textiles and belongings of the deceased. Using rapid fire-line barriers to prevent secondary vector (flea) migration.</p>
+                        <h3>Rodent & flea control</h3>
+                        <p>Reduce rats and fleas, maintain cleanliness, and properly dispose of waste to limit the plague,s spread.</p>
                         <div class="hex-status stable">CLEANSE STABLE</div>
                     </div>
                 </div>
@@ -207,6 +209,76 @@
         </div>
     </div>
 </section>
+
+<footer class="cyber-footer">
+    <div class="footer-grid-overlay"></div>
+
+    <div class="footer-main-container">
+        <div class="footer-grid">
+            <div class="footer-column brand-col">
+                <div class="footer-logo-wrapper">
+                    <h3 class="cyber-logo" data-text="VERTEX SYSTEMS">VERTEX SYSTEM</h3>
+                    <div class="logo-underline"></div>
+                </div>
+                <p class="cyber-description">
+                    Advanced pathogen surveillance and viral threat analysis. Monitoring global outbreaks in real time.
+                </p>
+                <div class="footer-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">SURVEILLANCE ACTIVE // 2026</span>
+                </div>
+            </div>
+
+            <div class="footer-column collapsible-section" id="terminal-section">
+                <h4 class="column-title" onclick="toggleFooterSection('terminal-section')">
+                    Navigation <span class="mobile-plus">+</span>
+                </h4>
+                <ul class="cyber-links">
+                    <li><a href="../html/index.htm"><span class="link-prefix">></span> Home</a></li>
+                    <li><a href="../html/about.htm"><span class="link-prefix">></span> About</a></li>
+                    <li><a href="../html/contact.htm"><span class="link-prefix">></span> Contact</a></li>
+                    <li><a href="../html/contact.htm"><span class="link-prefix">></span> FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column collapsible-section" id="pathogen-section">
+                <h4 class="column-title" onclick="toggleFooterSection('pathogen-section')">
+                    Viruses <span class="mobile-plus">+</span>
+                </h4>
+                <ul class="cyber-links">
+                    <li><a href="../html/corona.htm"><span class="link-prefix">></span> Covid-19</a></li>
+                    <li><a href="../html/bd.htm"><span class="link-prefix">></span> Black Death</a></li>
+                    <li><a href="../html/ebola.htm"><span class="link-prefix">></span> Ebola</a></li>
+                    <li><a href="../html/aids.htm"><span class="link-prefix">></span> HIV/AIDS</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column social-col">
+                <h4 class="column-title">Connect with us</h4>
+                <div class="cyber-socials">
+                    <a href="https://www.facebook.com/" class="social-hex fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" class="social-hex insta" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.google.com/" class="social-hex tw" title="X"><i class="fab fa-google"></i></a>
+                    <a href="https://pk.linkedin.com/" class="social-hex li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="secure-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>ENCRYPTED CONNECTION</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom-vault">
+        <div class="bottom-container">
+            <p class="copyright">&copy; 2026 VERTEX SYSTEMS // ALL RIGHTS RESERVED</p>
+            <div class="legal-links">
+                <a href="#">PRIVACY_POLICY</a>
+                <a href="#">TERMS_OF_USE</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script src="/js/jquery-4.0.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
