@@ -101,6 +101,31 @@ body {
     width: 100%;
 }
 
+@media (max-width: 350px) {
+    .navbar {
+        padding: 20px 0 !important;
+    }
+
+    .navbar-brand {
+        font-size: 1rem; 
+        letter-spacing: 1px; 
+        display: flex;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .virus-spinner2 {
+        width: 30px !important; 
+        height: 30px !important;
+        margin-right: 8px;
+    }
+    
+    .navbar-toggler {
+        padding: 4px 8px;
+        font-size: 1rem;
+    }
+}
+
 .nav-link:hover{
     color: var(--color-danger) !important;
 }
