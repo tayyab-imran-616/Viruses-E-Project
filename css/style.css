@@ -15,7 +15,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Background Movement */
 @keyframes bg-shift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -45,7 +44,7 @@ h1, h2, h3, h4, h5 {
 .bg-dark { background-color: var(--color-bg-dark); }
 .section-padding { padding: 100px 0; }
 
-/* NEW VIRUS BACKGROUND SECTION */
+/* VIRUS BACKGROUND SECTION */
 .bg-virus-pattern {
     background: linear-gradient(to bottom, #0c0c1a, #1a0505); 
     border-top: 1px solid #222;
@@ -147,8 +146,6 @@ h1, h2, h3, h4, h5 {
         font-size: 1rem;
     }
 }
-
-/* --- UNDERLINE ON HOVER --- */
 
 .nav-link::before {
     content: '';
@@ -502,7 +499,7 @@ h1, h2, h3, h4, h5 {
 .legal-links a { font-size: 11px; color: rgba(255,255,255,0.4); text-decoration: none; margin-left: 20px; transition: 0.3s; }
 .legal-links a:hover { color: #ff0040; }
 
-/* --- MOBILE SPECIFIC (Word to Word Content + Compact Control) --- */
+/* --- MOBILE SPECIFIC --- */
 @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 
 @media (max-width: 600px) {
@@ -516,13 +513,11 @@ h1, h2, h3, h4, h5 {
     
     .mobile-plus { display: block; color: #ff0040; font-size: 20px; font-family: sans-serif; }
 
-    /* Hide links by default on mobile */
     .collapsible-section .cyber-links {
         max-height: 0; overflow: hidden;
         transition: max-height 0.4s ease-out;
     }
 
-    /* Show links when 'active' class is added */
     .collapsible-section.active .cyber-links {
         max-height: 300px; padding-top: 15px; padding-bottom: 15px;
     }

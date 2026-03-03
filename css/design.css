@@ -359,7 +359,7 @@ body {
     height: 100%;
     width: 4px;
     background: #28051e !important;
-    box-shadow: 0 0 15px #642C48, 0 0 30px rgba(100, 44, 72, 0.5); /* Custom Glow */
+    box-shadow: 0 0 15px #642C48, 0 0 30px rgba(100, 44, 72, 0.5); 
     animation: scanLeftRightCyan 3s linear infinite;
     z-index: 2;
 }
@@ -566,7 +566,7 @@ body {
     .protocol-item { border-left: none; border-bottom: 2px solid var(--accent-red); }
 }
 
-/* --- CYBER FOOTER BASE (Same to Same) --- */
+/* --- CYBER FOOTER BASE --- */
 .cyber-footer {
     background-color: #030305;
     color: #ffffff;
@@ -691,7 +691,7 @@ body {
 .legal-links a { font-size: 11px; color: rgba(255,255,255,0.4); text-decoration: none; margin-left: 20px; transition: 0.3s; }
 .legal-links a:hover { color: #ff0040; }
 
-/* --- MOBILE SPECIFIC (Word to Word Content + Compact Control) --- */
+/* --- MOBILE SPECIFIC--- */
 @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 
 @media (max-width: 600px) {
@@ -705,13 +705,11 @@ body {
     
     .mobile-plus { display: block; color: #ff0040; font-size: 20px; font-family: sans-serif; }
 
-    /* Hide links by default on mobile */
     .collapsible-section .cyber-links {
         max-height: 0; overflow: hidden;
         transition: max-height 0.4s ease-out;
     }
 
-    /* Show links when 'active' class is added */
     .collapsible-section.active .cyber-links {
         max-height: 300px; padding-top: 15px; padding-bottom: 15px;
     }
@@ -769,17 +767,6 @@ body {
     align-items: center;
 }
 
-/* .radar-core {
-    width: 120px;
-    height: 120px;
-    background: var(--color-danger);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    box-shadow: 0 0 50px rgba(220, 0, 0, 0.5);
-} */
 
 .core-inner {
     font-weight: 900;
@@ -787,25 +774,12 @@ body {
     color: #fff;
 }
 
-/* .core-pulse {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border: 2px solid var(--color-danger);
-    border-radius: 50%;
-    animation: aids-ripple 2s infinite linear;
-}
 
-@keyframes aids-ripple {
-    0% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(4); opacity: 0; }
-} */
-
-/* HIV Circle - Isko relative rakha taake pulse iske center se nikle */
+/* HIV Circle  */
 .radar-core {
     width: 120px !important;
     height: 120px !important;
-    background: #dc0000 !important; /* Direct Red Color */
+    background: #dc0000 !important; 
     border-radius: 50% !important;
     display: flex !important;
     align-items: center !important;
@@ -818,7 +792,7 @@ body {
     animation: float-hiv 3s ease-in-out infinite !important;
 }
 
-/* Pulse / Ripple - Isko absolute center kiya hai */
+/* Pulse / Ripple  */
 .core-pulse {
     position: absolute !important;
     top: 50% !important;
@@ -827,13 +801,13 @@ body {
     height: 100% !important;
     border: 2px solid #dc0000 !important;
     border-radius: 50% !important;
-    z-index: -1 !important; /* Circle ke piche */
+    z-index: -1 !important; 
     pointer-events: none !important;
     /* Animation call */
     animation: aids-ripple-final 2s infinite linear !important;
 }
 
-/* Animation Keyframes - Inka naam unique rakha hai */
+/* Animation Keyframes */
 @keyframes aids-ripple-final {
     0% { 
         transform: translate(-50%, -50%) scale(1); 
@@ -899,16 +873,9 @@ body {
 .node-2 .node-connector { top: 50%; right: 100%; }
 .node-3 .node-connector { bottom: 100%; left: 50%; transform: rotate(-45deg); }
 
-/* @media (max-width: 991px) {
-    .radar-container { height: auto; flex-direction: column; gap: 40px; }
-    .radar-node { position: static; width: 100%; }
-    .radar-core { margin-bottom: 50px; }
-    .node-connector { display: none; }
-} */
-
 /* --- Master Responsive Fix for Radar Section --- */
 @media (max-width: 991px) {
-    /* 1. Container ko free karo taake content niche barh sake */
+
     .radar-container { 
         height: auto !important; 
         min-height: auto !important;
@@ -919,15 +886,13 @@ body {
         overflow: visible !important;
     }
 
-    /* 2. Radar Core (Circle) ko center mein set karo */
     .radar-core { 
         position: relative !important;
-        margin: 0 auto 60px !important; /* Circle aur cards ke beech gap */
+        margin: 0 auto 60px !important; 
         z-index: 10;
-        order: 1; /* Circle hamesha upar rahega */
+        order: 1; 
     }
 
-    /* Pulse animation ko thoda control mein rakho mobile par */
     .core-pulse {
         width: 120px !important;
         height: 120px !important;
@@ -936,27 +901,25 @@ body {
         transform: translate(-50%, -50%) !important;
     }
 
-    /* 3. Saare Nodes (Cards) ko tameez se line mein lao */
     .radar-node { 
-        position: relative !important; /* Absolute positions cancel */
+        position: relative !important; 
         top: auto !important;
         left: auto !important;
         right: auto !important;
         bottom: auto !important;
         transform: none !important;
         width: 100% !important; 
-        max-width: 400px !important; /* Mobile par width control */
+        max-width: 400px !important; 
         margin: 0 auto !important;
-        order: 2; /* Cards circle ke niche aayenge */
+        order: 2; 
     }
 
     .node-info {
         width: 100% !important;
         margin-bottom: 20px !important;
-        text-align: center !important; /* Mobile par text center acha lagta hai */
+        text-align: center !important; 
     }
 
-    /* 4. Connectors (Jo lines thi) unhein bilkul gayab karo */
     .node-connector { 
         display: none !important; 
     }
@@ -1197,9 +1160,6 @@ body {
     .node-connector { display: none; }
 }
 
-/* --- THEME SPECIFIC GLOW & COLORS --- */
-/* Corona & Ebola (Red Neon) */
-
 /* --- CORONA GLOW ULTIMATE FIX --- */
 .corona-theme .status-progress-bar,
 section[class*="corona"] .status-progress-bar {
@@ -1214,7 +1174,6 @@ section[class*="corona"] .status-progress-bar {
     z-index: 10 !important;
 }
 
-/* Heading ke niche wali line ka glow */
 .corona-theme .title-underline,
 section[class*="corona"] .title-underline {
     background: #ff0040 !important;
