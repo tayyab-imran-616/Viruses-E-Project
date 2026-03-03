@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
-    // 1. LOADER
+    // LOADER
     setTimeout(function() {
         $('#loader').fadeOut('slow', function() {
             $('body').css('overflow', 'auto');
         });
     }, 2000);
 
-    // 2. NAVBAR SCROLL
+    // NAVBAR SCROLL
     $(window).scroll(function() {
         if ($(this).scrollTop() > 50) {
             $('.navbar').addClass('scrolled');
@@ -16,7 +16,7 @@ $(document).ready(function() {
         }
     });
 
-    // 3. HERO PARALLAX
+    // HERO PARALLAX
     $(window).scroll(function() {
         let scrollPos = $(this).scrollTop();
         if (scrollPos < $(window).height()) {
@@ -27,7 +27,7 @@ $(document).ready(function() {
         }
     });
 
-    // 4. SMOOTH CARD ANIMATION LOGIC
+    // SMOOTH CARD ANIMATION LOGIC
     let ticking = false;
 
     $(window).on('scroll resize', function() {
@@ -60,13 +60,10 @@ $(document).ready(function() {
             var percentage = distanceScrolled / maxScrollable;
             
             var numberOfCards = 5;
-            // Use math to snap to the specific card index
             var activeIndex = Math.floor(percentage * numberOfCards);
             
-            // Ensure index stays within bounds
             activeIndex = Math.max(0, Math.min(activeIndex, numberOfCards - 1));
             
-            // Only toggle classes if the index has changed (performance)
             $('.hygiene-card').each(function(index) {
                 if (index === activeIndex) {
                     if (!$(this).hasClass('active')) $(this).addClass('active');
@@ -84,14 +81,14 @@ $(document).ready(function() {
         }
     }
 
-    // 5. SMOOTH ANCHOR SCROLLING
+    // SMOOTH ANCHOR SCROLLING
     $('a.nav-link[href^="#"], .btn-custom[href^="#"]').on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
-            }, 100, function(){ // Faster scroll for better feel
+            }, 100, function(){
                 window.location.hash = hash;
             });
         }
