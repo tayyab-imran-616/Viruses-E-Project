@@ -393,7 +393,6 @@ body {
     animation: scanLeftRight 3s linear infinite;
 }
 
-/* Symptoms Section */
 .symptoms-section {
     padding: 100px 0;
     background-color: #050505;
@@ -483,7 +482,6 @@ body {
     transition: all 0.8s ease-out;
 }
 
-/* Prevention Section */
 .prevention-section {
     background: #050505;
     position: relative;
@@ -530,7 +528,6 @@ body {
     margin-bottom: 0;
 }
 
-/* Circular Scanner */
 .scanner-circle-wrapper {
     position: relative;
     width: 250px;
@@ -566,7 +563,6 @@ body {
     .protocol-item { border-left: none; border-bottom: 2px solid var(--accent-red); }
 }
 
-/* --- CYBER FOOTER BASE --- */
 .cyber-footer {
     background-color: #030305;
     color: #ffffff;
@@ -691,7 +687,6 @@ body {
 .legal-links a { font-size: 11px; color: rgba(255,255,255,0.4); text-decoration: none; margin-left: 20px; transition: 0.3s; }
 .legal-links a:hover { color: #ff0040; }
 
-/* --- MOBILE SPECIFIC--- */
 @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 
 @media (max-width: 600px) {
@@ -737,7 +732,6 @@ body {
     }
 }
 
-/* Background Image Adjustments */
 .bd-bg-adjust {
     background-image: url('/images/bd-1.png') !important;
     filter: brightness(0.8) contrast(1.1) !important;
@@ -752,8 +746,6 @@ body {
     background-image: url('/images/aids-8.jpg') !important;
     filter: brightness(0.7) contrast(1.1) !important;
 }
-
-/* Radar Section */
 
 .text-accent{
     margin-top: 20px;
@@ -774,8 +766,6 @@ body {
     color: #fff;
 }
 
-
-/* HIV Circle  */
 .radar-core {
     width: 120px !important;
     height: 120px !important;
@@ -788,11 +778,9 @@ body {
     z-index: 10 !important;
     box-shadow: 0 0 40px rgba(220, 0, 0, 0.8) !important;
     margin: 0 auto !important;
-    /* Floating Effect */
     animation: float-hiv 3s ease-in-out infinite !important;
 }
 
-/* Pulse / Ripple  */
 .core-pulse {
     position: absolute !important;
     top: 50% !important;
@@ -803,11 +791,9 @@ body {
     border-radius: 50% !important;
     z-index: -1 !important; 
     pointer-events: none !important;
-    /* Animation call */
     animation: aids-ripple-final 2s infinite linear !important;
 }
 
-/* Animation Keyframes */
 @keyframes aids-ripple-final {
     0% { 
         transform: translate(-50%, -50%) scale(1); 
@@ -873,7 +859,6 @@ body {
 .node-2 .node-connector { top: 50%; right: 100%; }
 .node-3 .node-connector { bottom: 100%; left: 50%; transform: rotate(-45deg); }
 
-/* --- Master Responsive Fix for Radar Section --- */
 @media (max-width: 991px) {
 
     .radar-container { 
@@ -924,8 +909,6 @@ body {
         display: none !important; 
     }
 }
-
-/* Hex Vault Section */
 
 .cyber-glitchA{
     margin-bottom: 20px;
@@ -1024,7 +1007,6 @@ body {
     .central-hex { transform: scale(1); }
 }
 
-/* AIDS Biotech Section */
 .aids-biotech-section {
     position: relative;
     overflow: hidden;
@@ -1036,8 +1018,6 @@ body {
     letter-spacing: 4px;
 }
 
-/* --- EBOLA TERMINAL --- */
-
 .status-bar{
     margin-top: 20px;
 }
@@ -1048,7 +1028,6 @@ body {
     color: #fff;
 }
 
-/* Background terminal grid overlay */
 .terminal-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -1059,7 +1038,6 @@ body {
     pointer-events: none;
 }
 
-/* Glitch text animation */
 .terminal-glitch {
     font-size: 3rem;
     font-weight: 900;
@@ -1079,7 +1057,6 @@ body {
     100% { text-shadow: -0.025em 0 0 rgba(255,0,0,0.75), -0.025em -0.025em 0 rgba(0,255,0,0.75); }
 }
 
-/* Terminal nodes */
 .terminal-node {
     display: flex;
     align-items: center;
@@ -1116,7 +1093,6 @@ body {
 .node-text h3 { font-size: 1.8rem; color: #fff; margin-bottom: 10px; }
 .node-text p  { color: #a0a0b0; font-size: 1rem; }
 
-/* Hover effects */
 .terminal-node:hover .node-circle {
     background: var(--color-danger);
     color: #fff;
@@ -1124,7 +1100,6 @@ body {
     transition: transform 0.6s ease;
 }
 
-/* Connector lines between nodes */
 .node-connector {
     position: absolute;
     height: 2px;
@@ -1137,7 +1112,6 @@ body {
 .node-2 .node-connector { top: 50%; right: 100%; }
 .node-3 .node-connector { bottom: 100%; left: 50%; transform: rotate(-45deg); }
 
-/* Pulse Dot Indicator */
 .pulse-dot {
     height: 10px; width: 10px;
     background-color: var(--color-danger);
@@ -1152,7 +1126,6 @@ body {
     100% { transform: scale(1); opacity: 1; }
 }
 
-/* Responsive fixes */
 @media (max-width: 768px) {
     .terminal-node, .terminal-node.right { flex-direction: column; text-align: center; }
     .node-text { padding: 20px 0; }
@@ -1160,7 +1133,6 @@ body {
     .node-connector { display: none; }
 }
 
-/* --- CORONA GLOW ULTIMATE FIX --- */
 .corona-theme .status-progress-bar,
 section[class*="corona"] .status-progress-bar {
     background: #ff0040 !important;
@@ -1186,13 +1158,11 @@ section[class*="corona"] .title-underline {
     box-shadow: 0 0 30px rgba(177,98,111,1);
 }
 
-/* Black Death (Orange Neon) */
 .plague-theme .status-progress-bar { 
     background: #ff9900 !important; 
     box-shadow: 0 0 15px #ff9900, 0 0 30px rgba(255, 153, 0, 0.4); 
 }
 
-/* AIDS (Cyan/Blue Neon) */
 .aids-theme .status-progress-bar { 
     background: #642C48 !important;
     box-shadow: 0 0 15px #642C48, 0 0 30px rgba(100, 44, 72, 0.5); /* Custom Glow */
@@ -1205,7 +1175,6 @@ section[class*="corona"] .title-underline {
     position: relative;
 }
 
-/* --- INTRO SECTION POLISHING --- */
 .intro-text-box p {
     text-align: justify;
     text-justify: inter-word;
@@ -1241,14 +1210,12 @@ section[class*="corona"] .title-underline {
     filter: grayscale(0) brightness(1);
 }
 
-/* --- ANIMATION & RESPONSIVE FIXES --- */
 @keyframes loaderSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 @keyframes slowSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
 .virus-spinner { animation: loaderSpin 2s linear infinite !important; }
 .virus-spinner2 { animation: slowSpin 6s linear infinite !important; }
 
-/* Responsive Spacing Fix */
 @media (max-width: 991px) {
     .intro-content-wrapper {
         display: flex;

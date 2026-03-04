@@ -1,11 +1,9 @@
-//  LOADER
-    setTimeout(function() {
+setTimeout(function() {
         $('#loader').fadeOut('slow', function() {
             $('body').css('overflow', 'auto');
         });
     }, 2000);
 
-    // 2. NAVBAR SCROLL
     $(window).scroll(function() {
         if ($(this).scrollTop() > 50) {
             $('.navbar').addClass('scrolled');
@@ -14,7 +12,6 @@
         }
     });
 
-// Navbar background change on scroll
 window.addEventListener('scroll', function() {
     const nav = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -26,29 +23,25 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Initialize Scan Button Animation
 function initializeScan() {
     const btn = document.querySelector('.btn-scan');
     btn.innerHTML = "SCANNING...";
     btn.style.borderColor = "#ff0040";
     btn.style.color = "#ff0040";
-    
-    // Smooth scroll to next section after fake delay
+
     setTimeout(() => {
         document.getElementById('intro').scrollIntoView({ behavior: 'smooth' });
-        // Reset button text after scroll
         setTimeout(() => { btn.innerHTML = "INITIALIZE SCAN"; btn.style.color = ""; btn.style.borderColor = ""; }, 1000);
     }, 1500);
 }
 
-// Function to handle scroll animations
 function revealOnScroll() {
     const reveals = document.querySelectorAll('.intro-text-box, .intro-image-box');
     
     reveals.forEach(element => {
         const windowHeight = window.innerHeight;
         const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150; // Kab dikhna shuru ho
+        const elementVisible = 150;
         
         if (elementTop < windowHeight - elementVisible) {
             element.classList.add('reveal');
@@ -58,7 +51,6 @@ function revealOnScroll() {
 
 window.addEventListener('scroll', revealOnScroll);
 
-// Initial check in case user starts in middle of page
 revealOnScroll();
 
 function revealSymptoms() {
@@ -69,7 +61,6 @@ function revealSymptoms() {
         const cardTop = card.getBoundingClientRect().top;
 
         if(cardTop < triggerBottom) {
-            // Har card ko thora delay dena (Stagger effect)
             setTimeout(() => {
                 card.classList.add('reveal-up');
             }, index * 150); 
@@ -78,7 +69,6 @@ function revealSymptoms() {
 }
 
 window.addEventListener('scroll', revealSymptoms);
-// Initial check
 revealSymptoms();
 
 function revealPrevention() {
@@ -103,13 +93,11 @@ function revealPrevention() {
     });
 }
 
-// Set initial styles for animation
 document.querySelectorAll('.reveal-left').forEach(el => { el.style.opacity = "0"; el.style.transform = "translateX(-50px)"; });
 document.querySelectorAll('.reveal-right').forEach(el => { el.style.opacity = "0"; el.style.transform = "scale(0.8)"; });
 
 window.addEventListener('scroll', revealPrevention);
 
-// Form Submission Effect
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = this.querySelector('.btn-cyber');
